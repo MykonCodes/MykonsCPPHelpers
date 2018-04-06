@@ -24,8 +24,13 @@
 
 **/
 
-
 #pragma once
+
+#include <functional>
+#include <map>
+#include <iostream>
+#include <string>
+
 
 #define PPCAT_NX(A, B) A ## B
 #define DECON(a) a
