@@ -16,6 +16,9 @@
   After that, you can call
   Shape* myShape = Shape::GetIDTM()["CircleShape"](); 
   anywhere to allocate a CircleShape, also in the very first line in main();
+  
+  If you are not interested in all the macro behaviour, you should be able to extract all the logic behind the concept to use it without
+  macros.
 
 **/
 
