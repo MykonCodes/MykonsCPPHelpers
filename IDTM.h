@@ -22,6 +22,13 @@
   
   This code snippet should be easily extendable to support any kind of static function, not just allocating instances.
 
+  The gist of all of this is basically using a CRTP construct and one neat trick that allows you to call any function for any class on static initialization
+  without any need to call it somewhere manually or to instantiate the class, that is assigning a lambda or function to a static member that then executes that
+  function in it's constructor. Just be careful, static initialization is "random" (not guaranteed to be consistent in order), so I use
+  lazy initialization for the actual map, that grants that the map is actually initialized already (upon first call).
+  That trick I utilized to make deriving IDTM classes automatically register their MakeNew function, so you don't have to remember
+  anything when implementing new derived classes you want to have that functionality.
+  
 **/
 
 #pragma once
