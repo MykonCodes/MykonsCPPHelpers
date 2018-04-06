@@ -19,6 +19,8 @@
   
   If you are not interested in all the macro behaviour, you should be able to extract all the logic behind the concept to use it without
   macros.
+  
+  This code snippet should be easily extendable to support any kind of static function, not just allocating instances.
 
 **/
 
